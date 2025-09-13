@@ -42,7 +42,9 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-subtle">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-primary opacity-90" />
+        {/* Enhanced background overlay for better text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-purple-900/95" />
+        <div className="absolute inset-0 bg-gradient-primary opacity-60" />
         <img
           src={heroImage}
           alt="Community lending circles"
@@ -50,15 +52,18 @@ const Index = () => {
         />
         
         <div className="relative container mx-auto px-4 py-24">
-          <div className="max-w-4xl mx-auto text-center text-white space-y-8">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white drop-shadow-lg">
+          <div className="max-w-4xl mx-auto text-center text-white space-y-8 relative">
+            {/* Additional text overlay for better readability */}
+            <div className="absolute inset-0 bg-black/20 rounded-3xl backdrop-blur-sm -m-8 p-8"></div>
+            <div className="relative z-10">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white text-shadow-2xl">
               Borrow Together,{" "}
-              <span className="text-white drop-shadow-lg">
+              <span className="text-white text-shadow-2xl">
                 Privately
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
+            <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto leading-relaxed text-shadow-xl font-medium">
               Join trusted community lending circles where members pool resources and take turns accessing funds. 
               Your contributions stay encrypted while ensuring complete fairness.
             </p>
@@ -67,7 +72,7 @@ const Index = () => {
               <Button
                 size="lg"
                 onClick={handleGetStarted}
-                className="bg-white text-primary hover:bg-white/90 transition-all shadow-large text-lg px-8 py-4"
+                className="bg-white text-primary hover:bg-white/90 transition-all shadow-2xl text-lg px-8 py-4 font-semibold"
               >
                 <TrendingUp className="mr-2 h-5 w-5" />
                 Get Started
@@ -75,10 +80,11 @@ const Index = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 transition-all text-lg px-8 py-4"
+                className="border-white text-white hover:bg-white/10 transition-all text-lg px-8 py-4 font-semibold backdrop-blur-sm"
               >
                 Learn More
               </Button>
+            </div>
             </div>
           </div>
         </div>

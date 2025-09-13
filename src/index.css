@@ -125,3 +125,29 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Enhanced text shadows for better contrast */
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .text-shadow-xl {
+    text-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-shadow-2xl {
+    text-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Enhanced backdrop blur for better text readability */
+  .backdrop-blur-strong {
+    backdrop-filter: blur(8px);
+  }
+  
+  /* High contrast text overlay */
+  .text-overlay {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(4px);
+  }
+}
