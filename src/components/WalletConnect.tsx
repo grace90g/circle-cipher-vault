@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Wallet, CheckCircle } from "lucide-react";
-import { useConnectModal, useAccount, useDisconnect } from '@rainbow-me/rainbowkit';
+import { useConnectModal } from '@rainbow-me/rainbowkit';
+import { useAccount, useDisconnect } from 'wagmi';
 import { useToast } from "@/hooks/use-toast";
 import { useEffect } from "react";
 
